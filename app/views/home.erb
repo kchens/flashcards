@@ -1,32 +1,12 @@
 <div class="row">
 
+  <% @decks.each do |deck| %>
   <div class="col-md-3">
     <a href=""><div class="deck text-center">
-      <p>NAME FROM DB</p>
+      <p><%= deck.name %></p>
     </div></a>
   </div>
-
-   <div class="col-md-3">
-    <a href=""><div class="deck text-center">
-      <p>NAME FROM DB</p>
-    </div></a>
-  </div>
-
- <div class="col-md-3">
-    <a href=""><div class="deck text-center">
-      <p>NAME FROM DB</p>
-    </div></a>
-  </div>
-
- <div class="col-md-3">
-    <a href=""><div class="deck text-center">
-      <p>NAME FROM DB</p>
-    </div></a>
-  </div>
-
-
-
-
+  <% end %>
 
 </div>
 
