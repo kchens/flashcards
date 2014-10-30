@@ -1,0 +1,28 @@
+html,
+a {
+  font-family: 'Lato', sans-serif;
+}
+
+.deck {
+  height: 250px;
+  background-color: pink;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+nav {
+  background-color: grey;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+
+ul {
+   list-style-type: none;
+
+}
+
+.test {
+  background-color: yellow;
+}

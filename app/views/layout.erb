@@ -12,14 +12,40 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
 
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic' rel='stylesheet' type='text/css'>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
-<body>
-<h2>testtestetsetset</h2>
-  <%= yield %>
 
+<body>
+  <div class= "container">
+  <nav>
+    <div class="row">
+      <div class="brand col-md-3">
+        <a href="/">Flashcards</a>
+      </div>
+        <ul>
+           <!--  <li>
+              <form id="sign-out" action="" method="post">
+                <input name="_method" type="hidden" value="delete" />
+                <input type="submit" value="Sign Out">
+              </form>
+            </li> -->
+            <li class= "test col-md-2 col-md-offset-5"><a href="/sessions/new">Sign In</a></li>
+            <li class= "test col-md-2"><a href="/users/new">Sign Up</a></li>
+      </ul>
+      </div>
+  </nav>
+   <%= yield %>
+   </div>
 </body>
 </html>
+
+
