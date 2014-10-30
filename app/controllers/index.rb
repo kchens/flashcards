@@ -3,7 +3,23 @@ get '/' do
   erb :home
 end
 
-get'/'
+get'/game/:id' do
+  if session[:value]
+    @id=params[:id]
+    erb :game
+  else
+    redirect to ('/login')
+  end
+end
+
+post '/questions' do
+  if session[:value]
+    puts params[:deck].to_i
+    Deck.find(params[:deck].to_i).cards.to_a.shuffle
+  else
+    redirect to('/login')
+  end
+end
 
 #-------SESSIONS--------------------
 
@@ -24,10 +40,9 @@ post '/register' do
   end
 end
 
-delete '/sessions/:id' do
-  # sign-out -- invoked
+get '/logout' do
   session[:user_id] = nil
-  redirect '/'
+  redirect to '/'
 end
 #----------- USERS -----------
 
@@ -45,3 +60,6 @@ post '/users' do
     erb :sign_up
   end
 end
+
+
+#----------RESULTS-----------------------
