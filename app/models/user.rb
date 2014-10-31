@@ -1,6 +1,6 @@
 require 'bcrypt'
 
-class User < ActiveRecord::Base.connection_pool.with_connection do
+class User < ActiveRecord::Base
   has_many :scores
 
   #
@@ -22,5 +22,4 @@ class User < ActiveRecord::Base.connection_pool.with_connection do
       end
     end
   end
-end
 end

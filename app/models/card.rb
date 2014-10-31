@@ -1,4 +1,4 @@
-class Card < ActiveRecord::Base.connection_pool.with_connection do
+class Card < ActiveRecord::Base
   belongs_to :deck
 end
-end
+
