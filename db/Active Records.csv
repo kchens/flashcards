@@ -2,5 +2,3 @@ In Active Record is a model/class singular or plural?, singular,3
 In Active Record is a table/schema singular or plural?, plural ,3
 In Active Record in order to create and save a new object do you use new or create?, create,3
 In Active Record, how do you delete an object from your database?, destroy ,3
-
-

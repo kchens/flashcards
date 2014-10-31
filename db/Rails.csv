@@ -2,4 +2,3 @@ What is 'self' in Ruby?,self always refers to the current object ,4
 What is the difference between Symbol and String?, The symbol in Ruby on rails act the same way as the string but the difference is in their behaviors that are opposite to each other. ,4
 What are the different components of Rails?, Action Controller |Action View | Active Record |Action Mailer ,4
 What is the function of garbage collection in Ruby on Rails?, Garbage collection allows the removal of the pointer values that is left behind when the execution of the program ends. ,4
-

@@ -8,23 +8,35 @@ end
 get'/question/:id' do
   @deck = Deck.find(params[:id].to_i)
   @current_card = @deck.cards.to_a.pop
-  @right_answer = @current_card.answer
 
   @options = []
   3.times do
-    @options << Card.all.sample.answer
+    @options << Card.all.sample
   end
 
-  @options << @right_answer
+  @options << @current_card
 
   erb :qu_home
 end
 
-post '/question/:id' do
- @question = Card.find(params[:id]).questions
- # @answer =
- erb :qu_answer
+
+post '/answer/:id' do
+
+  chosen_id = params["chosen_answer"].keys.first
+  current_card_id = params[:id]
+
+  @current_card = Card.find(current_card_id)
+  @chosen_card = Card.find(chosen_id)
+
+  # we need current card, and the chosen card id
+  if @current_card.id == @chosen_card.id
+    @check = true
+  else
+    @check = false
+  end
+  erb :qu_answer
 end
+
 
 #-------SESSIONS--------------------
 

@@ -3,29 +3,16 @@
   <div class="row">
     <div class="card col-md-6 col-md-offset-3">
       <h1><%= @current_card.question %></h1>
-      <form>
+      <form action="/answer/<%= @current_card.id %>" method="post">
         <% @options.each do |option|%>
-          <p><input type="checkbox" name="" value:"answer">
-          <%= option %></p>
+          <p><input type="radio" name="chosen_answer[<%= option.id %>]" value:"answer">
+          <%= option.answer %></p>
         <%end%>
         <div class="button">
           <input type="submit" value="GO">
         </div>
       </form>
     </div>
-<!-- =======
-<div class="row">
-
-
-  <div class="col-md-6 col-md-offset-3">
-
-    <% @options.each do |option| %>
-      <%= option %>
-    <% end %>
-
-    </div></a>
->>>>>>> ariana_controller -->
   </div>
-
 </div>
 
