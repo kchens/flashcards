@@ -5,12 +5,23 @@
     <div class="card col-md-6 col-md-offset-3">
 
       <% if @check == true %>
-       <p>YES</p>
-
+      <div class=" answer text-center">
+       <h1>It is!</h1>
+        <div class="icon text-center">
+          <i style="font-size:200px;" class="fa fa-check-square"></i>
+        </div>
+        </div>
       <% else %>
-       <p>NO</p>
-
+      <div class=" answer text-center">
+        <h1>No, that is wrong</h1>
+       <p>The right answer is ANSWER</p>
+      </div>
+        <div class="icon text-center">
+          <i style="font-size:200px;" class="fa fa-minus-square"></i>
+        </div>
       <% end %>
+
+      <a class="next text-center" href="/question/:id">NEXT</a>
 
   </div>
 </div>
