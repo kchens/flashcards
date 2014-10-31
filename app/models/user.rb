@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
     password_salt=BCrypt::Engine.generate_salt
     p password_salt
     password_hash=BCrypt::Engine.hash_secret(password,password_salt)
-    User.create!(username: username,salt: password_salt, password_hash: password_hash)
+    User.create(username: username,salt: password_salt, password_hash: password_hash)
+    User.all.last
   end
 
   def authenticate(username,password)
