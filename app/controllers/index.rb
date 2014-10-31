@@ -6,14 +6,17 @@ get '/' do
 end
 
 get'/question/:id' do
-  # @question=Card.find(params[:id]).questions
-  @deck = Deck.find(params[:deck].to_i).cards.to_a.shuffle
-  #4 answers passed to the erb
-  @wrong_answers = []
+  @deck = Deck.find(params[:id].to_i)
+  @current_card = @deck.cards.to_a.pop
+  @right_answer = @current_card.answer
+
+  @options = []
   3.times do
-    @wrong_answers << Card.find(rand(10)).answer
+    @options << Card.all.sample.answer
   end
-  @right_answer=
+
+  @options << @right_answer
+
   erb :qu_home
 end
 
