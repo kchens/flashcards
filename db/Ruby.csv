@@ -1,0 +1,6 @@
+How do you create an array?, to_a , 2
+What does map output?, array, 2
+What is an enumerable?, The Enumerable mixin provides collection classes with several traversal and searching methods, and with the ability to sort., 2
+What does each_slice do?,Iterates the given block for each slice of <n> elements. If no block is given, returns an enumerator., 2
+
+
