@@ -25,21 +25,31 @@
 </head>
 
 <body>
-  <div class= "container">
-  <nav>
-    <div class="row">
-      <div class="brand col-md-3">
-        <a href="/">Flashcards</a>
-     <!--    <img src="/imgs/logo.jpg"> -->
+  <div class="topboarder">
+    <div class="container">
+    </div>
+  </div>
+  <nav class="shadow">
+    <div class="container">
+      <div class="row">
+        <div class="brand col-md-3">
+          <a href="/">
+            <img class="logo" src="/imgs/logo.jpg">
+          </a>
+        </div>
+          <ul class="signin">
+              <li class= "col-md-2 col-md-offset-5 text-right">
+                <a href="/login">Sign In</a>
+              </li>
+              <li class= "col-md-2 text-right">
+                <a href="/users/new">Sign Up</a>
+              </li>
+          </ul>
       </div>
-        <ul>
-            <li class= "test col-md-2 col-md-offset-5"><a href="/login">Sign In</a></li>
-            <li class= "test col-md-2"><a href="/users/new">Sign Up</a></li>
-      </ul>
-      </div>
+    </div>
   </nav>
+
    <%= yield %>
-   </div>
 </body>
 </html>
 
