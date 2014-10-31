@@ -14,14 +14,14 @@
       <% else %>
       <div class=" answer text-center">
         <h1>No, that is wrong</h1>
-       <p>The right answer is ANSWER</p>
+       <p>The right answer is "<%= @current_card.answer %>"</p>
       </div>
         <div class="icon text-center">
           <i style="font-size:200px;" class="fa fa-minus-square"></i>
         </div>
       <% end %>
 
-      <a class="next text-center" href="/question/<% @deck.id %>">NEXT</a>
+      <a class="next text-center" href="/question/<%= @deck.id %>">NEXT</a>
 
   </div>
 </div>

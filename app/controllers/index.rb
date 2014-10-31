@@ -7,7 +7,12 @@ end
 
 get'/question/:id' do
   @deck = Deck.find(params[:id])
-  @current_card = @deck.cards.to_a.pop
+  p "%%%%%%%%%%%%%"
+  questions_array=Deck.find(params[:id]).cards.to_a.shift
+  p questions_array
+  p Deck.find(params[:id]).cards
+   @current_card = Deck.find(params[:id]).cards.to_a.shift
+
 
   @options = []
   3.times do
