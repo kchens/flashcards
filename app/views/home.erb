@@ -11,7 +11,7 @@
 
   <% @decks.each do |deck| %>
     <div class="col-md-3">
-      <a href="">
+      <a href="/question/<%= deck.id %>">
         <div class="deck text-center">
           <h2 class="deck_text"><%= deck.name %></h2>
        </div>
