@@ -25,28 +25,41 @@
 </head>
 
 <body>
-  <div class= "container">
-    <nav>
+  <div class="topboarder">
+    <div class="container">
+    </div>
+  </div>
+  <nav class="shadow">
+    <div class="container">
       <div class="row">
         <div class="brand col-md-3">
-          <a href="/">Flashcards</a>
-          <!--    <img src="/imgs/logo.jpg"> -->
+          <a href="/">
+            <img class="logo" src="/imgs/logo.jpg">
+          </a>
         </div>
-        <ul>
-          <% if login? %>
-          <%=login? %>
-          <li class= "test col-md-2 col-md-offset-5">"Welcome <%=username%>" </a></li>
-          <li class= "test col-md-2"><a href="/logout">Log out</a></li>
-          <%else%>
-          <li class= "test col-md-2 col-md-offset-5"><a href="/login">Sign In</a></li>
-          <li class= "test col-md-2"><a href="/users/new">Sign Up</a></li>
-          <%end%>
+          <ul class="signin">
+            <% if login? %>
+              <li class= "col-md-2 col-md-offset-5 text-right">"Welcome <%=username%>"
+              </li>
+              <li class= "col-md-2 text-right">
+                <a href="/logout">Log out</a>
+              </li>
+              <%else%>
+              <li class= "col-md-2 col-md-offset-5 text-right">
+                <a href="/login">Sign In</a>
+              </li>
+              <li class= "col-md-2 text-right">
+                <a href="/users/new">Sign Up</a>
+              </li>
+              <%end%>
           </ul>
-        </div>
-      </nav>
-      <%= yield %>
+      </div>
     </div>
-  </body>
-  </html>
+  </nav>
+
+   <%= yield %>
+</body>
+</html>
+
 
 

@@ -1,12 +1,24 @@
+<div class="container">
+<div class="row">
+  <div class="text-center intro col-md-8 col-md-offset-2">
+    <h1>Welcome stranger!</h1>
+    <p>Gret that you made it! This is card game made by Ariana, Christine, Murat and Kevin, we hope you enjoy it!<br> Please pick a set of cards to start the game. <br>Oh and please don't forget to sign-in (after all the trouble we had making the sign in work)</p>
+  </div>
+  <br>
+</div>
+
 <div class="row">
 
   <% @decks.each do |deck| %>
-  <div class="col-md-3">
-    <a href=""><div class="deck text-center">
-      <p><%= deck.name %></p>
-    </div></a>
-  </div>
+    <div class="col-md-3">
+      <a href="">
+        <div class="deck text-center">
+          <h2 class="deck_text"><%= deck.name %></h2>
+       </div>
+      </a>
+    </div>
   <% end %>
 
+</div>
 </div>
 
