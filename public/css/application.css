@@ -4,9 +4,11 @@ a {
   text-decoration: none;
 }
 
+
 h1 {
   padding-top: 5%;
   text-transform: uppercase;
+  color:  red;
 }
 
 .topboarder {
@@ -84,9 +86,28 @@ ul {
   color: white;
 }
 
-.card {
-  height: 400px;
-  background-color: red;
+/*CARD*/
+
+
+
+.card h1 {
+  font-size: 45px;
+  color: #686868;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.card p {
+  font-size: 20px;
+  color: #686868;
+  padding-bottom: 20px;
+}
+
+.button input{
+  margin-top: 30px;
+  background-color: #005C5C;
+  padding: 10px 30px;
+  color: white;
 }
 
 
@@ -94,10 +115,14 @@ ul {
 /*SIGNIN*/
 
 .middle {
+
   width: 600px;
   margin:auto;
+  color:  #686868 ;
 }
 
-label {
 
+.label_new {
+padding: 20px 0px;
+margin-left:
 }

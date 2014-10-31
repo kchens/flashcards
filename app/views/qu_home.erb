@@ -1,12 +1,31 @@
+<<<<<<< HEAD
+<div class="container">
+  <div class="row">
+    <div class="card col-md-6 col-md-offset-3">
+      <h1><%= @current_card.question %></h1>
+      <form>
+        <% @options.each do |option|%>
+          <p><input type="checkbox" name="" value:"answer">
+          <%= option %></p>
+        <%end%>
+        <div class="button">
+          <input type="submit" value="GO">
+        </div>
+      </form>
+    </div>
+=======
 <div class="row">
 
 
-  <div class="card col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3">
 
+    <% @options.each do |option| %>
+      <%= option %>
+    <% end %>
 
     </div></a>
+>>>>>>> ariana_controller
   </div>
-
 
 </div>
 
