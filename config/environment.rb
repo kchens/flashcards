@@ -38,6 +38,22 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+helpers do
+
+  def login?
+    if session[:username].nil?
+      return false
+    else
+      return true
+    end
+  end
+
+  def username
+    return session[:username]
+  end
+
+end
+
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
