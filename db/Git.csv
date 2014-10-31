@@ -2,3 +2,5 @@ What does git checkout -b do?, Creates a new branch.,1
 When do I use git push origin master?, Never at DBC.,1
 How do I fork a repo?, Click fork in the top right corner of github page.,1
 When do I git fetch?, The git fetch command imports commits from a remote repository into your local repo.,1
+What does git status do?, Shows you the state of your project., 1
+What does git commit -a do? It allows you to skip the add stage of the workflow., 1
