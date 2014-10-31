@@ -6,7 +6,7 @@ get '/' do
 end
 
 get'/question/:id' do
-  @deck = Deck.find(params[:id].to_i)
+  @deck = Deck.find(params[:id])
   @current_card = @deck.cards.to_a.pop
 
   @options = []
@@ -28,7 +28,8 @@ post '/answer/:id' do
 
   @current_card = Card.find(current_card_id)
   @chosen_card = Card.find(chosen_id)
-  @deck = Deck.find(params[:id].to_i)
+
+  @deck = Deck.find(params[:deck_id].to_i)
 
   # we need current card, and the chosen card id
   if @current_card.id == @chosen_card.id
