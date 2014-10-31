@@ -1,3 +1,5 @@
+require 'securerandom'
+
 get '/' do
   @decks=Deck.all
   erb :home
@@ -27,7 +29,7 @@ get '/login' do
   erb :sign_in
 end
 
-post '/register' do
+post '/login' do
   # sign-in
   @user=User.find(params[:username])
   if @user.password == params[:password]
@@ -36,7 +38,7 @@ post '/register' do
     redirect '/'
   else
     #go back to signin
-    redirect '/register'
+    redirect '/login'
   end
 end
 
@@ -52,8 +54,12 @@ get '/users/new' do
 end
 
 post '/users' do
-  @user=User.new(params[:user])
-  if @user.save
+  username = params["username"]
+  password = params["password"]
+  @user = User.new
+  # if @user.register(username, password)
+  if username #comment this out later
+    session[:username] = @user.username
     redirect  '/'
   else
     @errors = @user.errors
@@ -61,5 +67,3 @@ post '/users' do
   end
 end
 
-
-#----------RESULTS-----------------------
