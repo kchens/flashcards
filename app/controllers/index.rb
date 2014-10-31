@@ -24,9 +24,11 @@ post '/answer/:id' do
 
   chosen_id = params["chosen_answer"].keys.first
   current_card_id = params[:id]
+  deck_id = params["deck_id"]
 
   @current_card = Card.find(current_card_id)
   @chosen_card = Card.find(chosen_id)
+  @deck = Deck.find(params[:id].to_i)
 
   # we need current card, and the chosen card id
   if @current_card.id == @chosen_card.id
